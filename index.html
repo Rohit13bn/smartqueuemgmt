@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartQueue — Smart Digital Queue Management System</title>
+    <meta name="description" content="Enterprise digital queue management system for university service centers featuring real-time token tracking, live TV counter displays, administrative queue control, and wait-time estimation." />
+    <meta property="og:title" content="SmartQueue — Smart Digital Queue Management System" />
+    <meta property="og:description" content="Enterprise digital queue management system for university service centers featuring real-time token tracking, live TV counter displays, administrative queue control, and wait-time estimation." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <script>
+      // Gracefully prevent unhandled WebSocket/HMR error logs in preview sandboxes where WebSockets are not forwarded
+      (function () {
+        const origError = console.error;
+        console.error = function (...args) {
+          if (args[0] && typeof args[0] === 'string' && (
+            args[0].includes('[vite] failed to connect to websocket') ||
+            args[0].includes('WebSocket closed without opened')
+          )) {
+            return;
+          }
+          origError.apply(console, args);
+        };
+        const origWarn = console.warn;
+        console.warn = function (...args) {
+          if (args[0] && typeof args[0] === 'string' && (
+            args[0].includes('[vite]') && args[0].includes('websocket')
+          )) {
+            return;
+          }
+          origWarn.apply(console, args);
+        };
+        window.addEventListener('unhandledrejection', function (e) {
+          if (e.reason && (
+            (e.reason.message && e.reason.message.toLowerCase().includes('websocket')) ||
+            (typeof e.reason === 'string' && e.reason.toLowerCase().includes('websocket'))
+          )) {
+            e.preventDefault();
+          }
+        });
+        window.addEventListener('error', function (e) {
+          if (e.message && e.message.toLowerCase().includes('websocket')) {
+            e.preventDefault();
+          }
+        });
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

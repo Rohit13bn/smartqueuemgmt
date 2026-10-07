@@ -1,0 +1,6 @@
+{
+  "name": "SmartQueue — Smart Digital Queue Management System",
+  "description": "Enterprise digital queue management system for university service centers featuring real-time token tracking, live TV counter displays, administrative queue control, and wait-time estimation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
